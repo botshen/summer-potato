@@ -1,5 +1,13 @@
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  .input {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .login {
+    margin-bottom: 10px;
+  }
 }
