@@ -21,6 +21,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "./src/**/*"   // 读取所有可识别的src目录下的文件（通过include）。
   ]
 }
