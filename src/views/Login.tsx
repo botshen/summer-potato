@@ -2,19 +2,21 @@ import s from "./Login.module.scss";
 import { Button, PasswordInput, Input } from "@mantine/core";
 import { Ghost } from "tabler-icons-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "../config/axios";
-
 
 const userInfo = {
   account: "summer",
   password: "123456",
 };
 
-const Login: React.FC = (props) => {
+const Login: React.FC = () => {
   let navigate = useNavigate();
   const [userData, setUserData] = useState(userInfo);
+  useEffect(() => {
+    console.log("sssssss");
+  }, []);
   const handleSubmit = async () => {
     const { account, password } = userData;
     try {
@@ -63,4 +65,4 @@ const Login: React.FC = (props) => {
   );
 };
 
-export default Login;
+export { Login };

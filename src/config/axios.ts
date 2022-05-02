@@ -1,5 +1,5 @@
 import axios from "axios";
-import history from "./history";
+import {history} from "./history";
 
 const appID = "q5HRLsW98Fem9zhjBkQnurVR";
 const appSecret = "Yg2AF3XwqcnoQ1LPnV8gD27n";
@@ -18,7 +18,7 @@ instance.interceptors.request.use(
   (config) => {
     const xToken = localStorage.getItem("x-token");
     if (xToken) {
-      config.headers!["Authorization"] = `Bearer ${xToken}`;
+      config.headers["Authorization"] = `Bearer ${xToken}`;
     }
     return config;
   },
