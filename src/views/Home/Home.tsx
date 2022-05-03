@@ -2,8 +2,10 @@ import React, {useEffect} from "react";
 import axios from "../../config/axios";
 import {Divider, Group, Menu} from "@mantine/core";
 import UserButton from "./Avatar";
-import {MessageCircle, Photo, Settings} from "tabler-icons-react";
+import {MessageCircle, Settings} from "tabler-icons-react";
 import s from "./Home.module.scss";
+import {Tomatoes} from "../Tomatoes/Tomatoes";
+import {Todos} from "../Todos/Todos";
 
 const Home: React.FC = () => {
     useEffect(() => {
@@ -31,9 +33,11 @@ const Home: React.FC = () => {
                     </Menu>
                 </Group>
             </header>
-            <Divider className={s.Divider} my="sm" />
-
-            <main></main>
+            <Divider className={s.Divider} my="sm"/>
+            <main>
+                <Tomatoes/>
+                <Todos/>
+            </main>
         </>
     )
 };
