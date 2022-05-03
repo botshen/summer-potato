@@ -15,6 +15,8 @@ specifiers:
   classnames: ^2.3.1
   eslint: ^8.1.0
   history: ^5.3.0
+  mobx: ^6.5.0
+  mobx-react-lite: ^3.3.0
   node-sass: npm:dart-sass@1.25.0
   react: ^18.1.0
   react-dom: ^18.1.0
@@ -38,6 +40,8 @@ dependencies:
   classnames: 2.3.1
   eslint: 8.14.0
   history: 5.3.0
+  mobx: 6.5.0
+  mobx-react-lite: 3.3.0_bdf1a6292e332f993648c63c29f77c32
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-router-dom: 6.3.0_react-dom@18.1.0+react@18.1.0
@@ -6810,6 +6814,28 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.6
+    dev: false
+
+  /mobx-react-lite/3.3.0_bdf1a6292e332f993648c63c29f77c32:
+    resolution: {integrity: sha512-U/kMSFtV/bNVgY01FuiGWpRkaQVHozBq5CEBZltFvPt4FcV111hEWkgwqVg9GPPZSEuEdV438PEz8mk8mKpYlA==}
+    peerDependencies:
+      mobx: ^6.1.0
+      react: ^16.8.0 || ^17
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      mobx: 6.5.0
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
+  /mobx/6.5.0:
+    resolution: {integrity: sha512-pHZ/cySF00FVENDWIDzJyoObFahK6Eg4d0papqm6d7yMkxWTZ/S/csqJX1A3PsYy4t5k3z2QnlwuCfMW5lSEwA==}
     dev: false
 
   /ms/2.0.0:

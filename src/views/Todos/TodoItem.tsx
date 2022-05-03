@@ -1,21 +1,19 @@
 import React from "react";
+import {observer} from 'mobx-react-lite'
+import {useStore} from '../../store'
+import {Checkbox} from '@mantine/core';
+import s from './TodoItem.module.scss'
 
-type TodoItemProps = {}
+const TodoItem: React.FC = () => {
 
-const TodoItem: React.FC<TodoItemProps> = (props) => {
-    // const {todo, onToggle, onRemove} = props;
     return (
-        <div></div>
-        // <li className="todo-item">
-        //     <input
-        //         type="checkbox"
-        //         checked={todo.complete}
-        //         onChange={() => onToggle(todo.id)}
-        //     />
-        //     <label className={todo.complete ? 'complete' : ''}>{todo.title}</label>
-        //     <button onClick={() => onRemove(todo.id)}>&#xd7;</button>
-        // </li>
+        <div className={s.wrapper}>
+            <Checkbox
+                checked={false}
+
+            />
+        </div>
     );
 };
 
-export default TodoItem;
+export default observer(TodoItem);

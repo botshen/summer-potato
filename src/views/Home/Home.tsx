@@ -6,10 +6,15 @@ import {MessageCircle, Settings} from "tabler-icons-react";
 import s from "./Home.module.scss";
 import {Tomatoes} from "../Tomatoes/Tomatoes";
 import {Todos} from "../Todos/Todos";
+import {observer} from 'mobx-react-lite'
+import {useStore} from '../../store'
 
 const Home: React.FC = () => {
+    const {todosStore} = useStore()
     useEffect(() => {
         axios.get("/me");
+        todosStore.initTodo()
+
     }, []);
     return (
         <>
@@ -42,4 +47,4 @@ const Home: React.FC = () => {
     )
 };
 
-export {Home};
+export default observer(Home);
