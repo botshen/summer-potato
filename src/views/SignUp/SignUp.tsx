@@ -27,7 +27,7 @@ function SignUp() {
         gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
         className={s.SignUp}
       >
-        登录
+        注册
       </Button>
       <span>
         如果宝宝有账号，<Link to="/login">登录</Link>吧

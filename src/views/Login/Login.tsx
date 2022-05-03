@@ -4,7 +4,7 @@ import { Ghost } from "tabler-icons-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../config/axios";
+import axios from "../../config/axios";
 
 const userInfo = {
   account: "summer",
