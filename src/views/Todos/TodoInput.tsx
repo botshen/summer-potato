@@ -4,19 +4,24 @@ import s from './TodoInput.module.scss'
 import { Plus } from 'tabler-icons-react'
 import axios from '../../config/axios'
 
-const TodoInput: React.FC = () => {
+type selfProps = {
+  addTodos: Function;
+};
+
+const TodoInput: React.FC<selfProps> = (props) => {
+  const { addTodos } = props;
   const [description, setDescription] = React.useState('')
   const addTodo = async (e: any) => {
     if (description === '') return
-    console.log(e.target.value)
     const response = await axios.post('todos', { description })
-    console.log(response)
     setDescription('')
+    addTodos()
   }
 
   const addTodoClick = () => {
     console.log(description)
     setDescription('')
+   
   }
   const rightSection =
     description === '' ? (

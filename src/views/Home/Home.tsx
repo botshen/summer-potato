@@ -40,7 +40,7 @@ const Home: React.FC = () => {
             </header>
             <Divider className={s.Divider} my="sm"/>
             <main>
-                <Tomatoes/>
+                
                 <Todos/>
             </main>
         </>
