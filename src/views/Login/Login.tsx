@@ -1,34 +1,34 @@
-import s from "./Login.module.scss";
-import { Button, PasswordInput, Input } from "@mantine/core";
-import { Ghost } from "tabler-icons-react";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "../../config/axios";
+import s from './Login.module.scss'
+import { Button, PasswordInput, Input } from '@mantine/core'
+import { Ghost } from 'tabler-icons-react'
+import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from '../../config/axios'
 
 const userInfo = {
-  account: "summer",
-  password: "123456",
-};
+  account: 'summer',
+  password: '123456',
+}
 
 const Login: React.FC = () => {
-  let navigate = useNavigate();
-  const [userData, setUserData] = useState(userInfo);
+  let navigate = useNavigate()
+  const [userData, setUserData] = useState(userInfo)
   useEffect(() => {
-    console.log("sssssss");
-  }, []);
+    console.log('sssssss')
+  }, [])
   const handleSubmit = async () => {
-    const { account, password } = userData;
+    const { account, password } = userData
     try {
-      await axios.post("sign_in/user", {
+      await axios.post('sign_in/user', {
         account,
         password,
-      });
-      navigate("/");
+      })
+      navigate('/')
     } catch (e) {
-      throw new Error(e as any);
+      throw new Error(e as any)
     }
-  };
+  }
   return (
     <div className={s.wrapper}>
       <h2>夏天闹钟登录 ⏰</h2>
@@ -38,7 +38,7 @@ const Login: React.FC = () => {
         placeholder="请输入宝宝的名字"
         value={userData.account}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setUserData({ ...userData, account: e.target.value });
+          setUserData({ ...userData, account: e.target.value })
         }}
       />
       <PasswordInput
@@ -47,22 +47,21 @@ const Login: React.FC = () => {
         required
         value={userData.password}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setUserData({ ...userData, password: e.target.value });
+          setUserData({ ...userData, password: e.target.value })
         }}
       />
       <Button
         variant="gradient"
-        gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
+        gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }}
         className={s.login}
-        onClick={handleSubmit}
-      >
+        onClick={handleSubmit}>
         登录
       </Button>
       <span>
         宝宝没有有账号? <Link to="/signup">注册</Link> 一个吧😄
       </span>
     </div>
-  );
-};
+  )
+}
 
-export { Login };
+export { Login }

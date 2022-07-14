@@ -1,7 +1,7 @@
-import s from "./SignUp.module.scss";
-import { Button, PasswordInput, Input } from "@mantine/core";
-import { Ghost } from "tabler-icons-react";
-import { Link } from "react-router-dom";
+import s from './SignUp.module.scss'
+import { Button, PasswordInput, Input } from '@mantine/core'
+import { Ghost } from 'tabler-icons-react'
+import { Link } from 'react-router-dom'
 
 function SignUp() {
   return (
@@ -24,16 +24,15 @@ function SignUp() {
       />
       <Button
         variant="gradient"
-        gradient={{ from: "#ed6ea0", to: "#ec8c69", deg: 35 }}
-        className={s.SignUp}
-      >
+        gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }}
+        className={s.SignUp}>
         注册
       </Button>
       <span>
         如果宝宝有账号，<Link to="/login">登录</Link>吧
       </span>
     </div>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp
